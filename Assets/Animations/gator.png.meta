@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: 4778230046dd7ba428de6da84a6a4700
+guid: c44f834859042a04cac46fb8098c8f99
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7651278940976623723
-    second: Knightro_Attack_0
+      213: 8907840165580800249
+    second: gator_0
   - first:
-      213: -1954956133816080386
-    second: Knightro_Attack_1
+      213: 803435107188945916
+    second: gator_1
   - first:
-      213: 6033382069809803573
-    second: Knightro_Attack_2
+      213: 1236520906495401976
+    second: gator_2
   - first:
-      213: 1416206115195191801
-    second: Knightro_Attack_3
+      213: -8577124916009650340
+    second: gator_3
+  - first:
+      213: 5021253622105235429
+    second: gator_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Knightro_Attack_0
+      name: gator_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 2
-        width: 27
-        height: 51
+        x: 0
+        y: 0
+        width: 60
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +127,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b60b65a98adce2a60800000000000000
-      internalID: 7651278940976623723
+      spriteID: 9f086615f610f9b70800000000000000
+      internalID: 8907840165580800249
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Knightro_Attack_1
+      name: gator_1
       rect:
         serializedVersion: 2
-        x: 80
-        y: 1
-        width: 31
-        height: 52
+        x: 65
+        y: 0
+        width: 58
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +149,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ef7eb6c01c99ed4e0800000000000000
-      internalID: -1954956133816080386
+      spriteID: cf3331429ff562b00800000000000000
+      internalID: 803435107188945916
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Knightro_Attack_2
+      name: gator_2
       rect:
         serializedVersion: 2
-        x: 144
-        y: 1
-        width: 37
-        height: 49
+        x: 130
+        y: 0
+        width: 55
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5317939b601eab350800000000000000
-      internalID: 6033382069809803573
+      spriteID: 8ff900d8631092110800000000000000
+      internalID: 1236520906495401976
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Knightro_Attack_3
+      name: gator_3
       rect:
         serializedVersion: 2
-        x: 206
-        y: 1
-        width: 32
-        height: 52
+        x: 191
+        y: 0
+        width: 59
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,8 +193,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9f102f855ff57a310800000000000000
-      internalID: 1416206115195191801
+      spriteID: c57b71b155ee7f880800000000000000
+      internalID: -8577124916009650340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gator_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 58
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5efd9b8c0931fa540800000000000000
+      internalID: 5021253622105235429
       vertices: []
       indices: 
       edges: []
@@ -210,10 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Knightro_Attack_0: 7651278940976623723
-      Knightro_Attack_1: -1954956133816080386
-      Knightro_Attack_2: 6033382069809803573
-      Knightro_Attack_3: 1416206115195191801
+      gator_0: 8907840165580800249
+      gator_1: 803435107188945916
+      gator_2: 1236520906495401976
+      gator_3: -8577124916009650340
+      gator_4: 5021253622105235429
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

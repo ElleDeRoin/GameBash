@@ -13,41 +13,47 @@ public class PlayerMovement : MonoBehaviour
     [Header("Animation")]
     [SerializeField] private Animator animator;
 
-    private bool isGrounded = false;
-    private bool isJumping = false;
-    private float jumpTimer = 0f;
-
     [Header("Auto Run")]
     [SerializeField] private float runSpeed = 5f;
 
+    private bool isGrounded;
+    private bool isJumping;
+    private float jumpTimer;
+
+    private void Awake()
+    {
+        if (animator == null)
+            animator = GetComponentInChildren<Animator>();
+    }
+
     private void Update()
     {
+        CheckGrounded();
         HandleMovement();
         HandleJump();
         UpdateAnimator();
     }
 
+    private void CheckGrounded()
+    {
+        isGrounded = Physics2D.OverlapCircle(feetPos.position, groundDistance, groundLayer);
+    }
+
     private void HandleMovement()
     {
-        // Always moving forward
+        // Auto-run
         rb.linearVelocity = new Vector2(runSpeed, rb.linearVelocity.y);
-
-        // Ground check
-        isGrounded = Physics2D.OverlapCircle(feetPos.position, groundDistance, groundLayer);
     }
 
     private void HandleJump()
     {
-        // Jump input
         if (isGrounded && Input.GetButtonDown("Jump"))
         {
             isJumping = true;
             jumpTimer = 0f;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            SetAnimatorTrigger("Jump");
         }
 
-        // Hold jump for variable height
         if (isJumping && Input.GetButton("Jump"))
         {
             if (jumpTimer < jumpTime)
@@ -61,7 +67,6 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        // Stop jump on release
         if (Input.GetButtonUp("Jump"))
         {
             isJumping = false;
@@ -71,23 +76,25 @@ public class PlayerMovement : MonoBehaviour
 
     private void UpdateAnimator()
     {
-        // Update animation parameters safely
+        float yVelocity = rb.linearVelocity.y;
+
+        // Always running
         SetAnimatorBool("isRunning", true);
-        SetAnimatorBool("isJumping", !isGrounded && rb.linearVelocity.y > 0.1f);
-        SetAnimatorBool("isFalling", rb.linearVelocity.y < -0.1f && !isGrounded);
+
+        // Jumping: moving upwards & not grounded
+        SetAnimatorBool("isJumping", !isGrounded && yVelocity > 0.1f);
+
+        // Falling: moving downwards & not grounded
+        SetAnimatorBool("isFalling", !isGrounded && yVelocity < -0.1f);
+
+        // Grounded state
+        SetAnimatorBool("isGrounded", isGrounded);
     }
 
-    // --- Animator helper methods ---
     private void SetAnimatorBool(string param, bool value)
     {
         if (animator != null && HasParameter(param))
             animator.SetBool(param, value);
-    }
-
-    private void SetAnimatorTrigger(string param)
-    {
-        if (animator != null && HasParameter(param))
-            animator.SetTrigger(param);
     }
 
     private bool HasParameter(string param)
@@ -102,7 +109,6 @@ public class PlayerMovement : MonoBehaviour
         return false;
     }
 
-    // Optional: visualize ground check in Scene view
     private void OnDrawGizmosSelected()
     {
         if (feetPos != null)

@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: 4778230046dd7ba428de6da84a6a4700
+guid: 3568ada5ca38466449326a6492ce84d4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7651278940976623723
-    second: Knightro_Attack_0
+      213: -6367637764002013411
+    second: owl_0
   - first:
-      213: -1954956133816080386
-    second: Knightro_Attack_1
+      213: -2939109005597694735
+    second: owl_1
   - first:
-      213: 6033382069809803573
-    second: Knightro_Attack_2
+      213: -6501498598560719561
+    second: owl_2
   - first:
-      213: 1416206115195191801
-    second: Knightro_Attack_3
+      213: -45462799286393369
+    second: owl_3
+  - first:
+      213: -3637282536961144246
+    second: owl_4
+  - first:
+      213: 6235972181758879506
+    second: owl_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Knightro_Attack_0
+      name: owl_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 2
-        width: 27
-        height: 51
+        x: 6
+        y: 17
+        width: 54
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b60b65a98adce2a60800000000000000
-      internalID: 7651278940976623723
+      spriteID: d1f1c4ad03b91a7a0800000000000000
+      internalID: -6367637764002013411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Knightro_Attack_1
+      name: owl_1
       rect:
         serializedVersion: 2
-        x: 80
-        y: 1
-        width: 31
-        height: 52
+        x: 67
+        y: 19
+        width: 53
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ef7eb6c01c99ed4e0800000000000000
-      internalID: -1954956133816080386
+      spriteID: 1f4a2357eef2637d0800000000000000
+      internalID: -2939109005597694735
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Knightro_Attack_2
+      name: owl_2
       rect:
         serializedVersion: 2
-        x: 144
-        y: 1
-        width: 37
-        height: 49
+        x: 131
+        y: 13
+        width: 46
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5317939b601eab350800000000000000
-      internalID: 6033382069809803573
+      spriteID: 73d9615987906c5a0800000000000000
+      internalID: -6501498598560719561
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Knightro_Attack_3
+      name: owl_3
       rect:
         serializedVersion: 2
-        x: 206
-        y: 1
-        width: 32
-        height: 52
+        x: 191
+        y: 3
+        width: 55
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,8 +196,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9f102f855ff57a310800000000000000
-      internalID: 1416206115195191801
+      spriteID: 7e52a0e23db7e5ff0800000000000000
+      internalID: -45462799286393369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: owl_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 7
+        width: 63
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4a03b4cdc6c58dc0800000000000000
+      internalID: -3637282536961144246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: owl_5
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 10
+        width: 62
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 217a4f2e8af9a8650800000000000000
+      internalID: 6235972181758879506
       vertices: []
       indices: 
       edges: []
@@ -210,10 +260,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Knightro_Attack_0: 7651278940976623723
-      Knightro_Attack_1: -1954956133816080386
-      Knightro_Attack_2: 6033382069809803573
-      Knightro_Attack_3: 1416206115195191801
+      owl_0: -6367637764002013411
+      owl_1: -2939109005597694735
+      owl_2: -6501498598560719561
+      owl_3: -45462799286393369
+      owl_4: -3637282536961144246
+      owl_5: 6235972181758879506
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

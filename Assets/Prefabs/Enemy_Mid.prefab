@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6899713453940987733}
   - component: {fileID: 9096405465242363796}
   - component: {fileID: 3684205282618005193}
+  - component: {fileID: 4339380180113093084}
   m_Layer: 9
   m_Name: Enemy_Mid
   m_TagString: MediumEnemy
@@ -73,7 +74,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.9375, y: 0.53125}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -152,8 +153,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 8eb49f8bed9384a4185faf68abc8bf2a, type: 3}
-  m_Color: {r: 1, g: 0.569441, b: 0, a: 1}
+  m_Sprite: {fileID: 1848481911979869627, guid: 4392e42587762ca4e8e84a08ec7095d4, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -177,3 +178,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   enemyType: High
+--- !u!95 &4339380180113093084
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6058486384843394484}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 55ba486f0911fcd47a7f5f24cdfdd462, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

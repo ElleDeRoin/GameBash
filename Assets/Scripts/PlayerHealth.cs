@@ -13,27 +13,35 @@ public class PlayerHealth : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
-    private Animator anim;
+    [Header("Animation")]
+    [Tooltip("Animator on the child VFX with the SpriteRenderer")]
+    public Animator anim;
+
     private bool isDead = false;
 
     private void Start()
     {
-        anim = GetComponent<Animator>(); // Grab animator
+        // Automatically find Animator in child if not assigned
+        if (anim == null)
+            anim = GetComponentInChildren<Animator>();
+
         currentHealth = maxHealth;
         UpdateHeartsUI();
     }
 
-    // Call this to reduce player health
+    /// <summary>
+    /// Call this to reduce player health
+    /// </summary>
     public void TakeDamage(int amount)
     {
         if (isDead) return;
 
         currentHealth -= amount;
-        if (currentHealth < 0)
-            currentHealth = 0;
+        currentHealth = Mathf.Max(currentHealth, 0);
 
         // Play damage animation
-        anim.SetTrigger("Damage");
+        if(anim != null)
+            anim.SetTrigger("Damage");
 
         UpdateHeartsUI();
 
@@ -47,10 +55,7 @@ public class PlayerHealth : MonoBehaviour
     {
         for (int i = 0; i < hearts.Length; i++)
         {
-            if (i < currentHealth)
-                hearts[i].sprite = fullHeart;
-            else
-                hearts[i].sprite = emptyHeart;
+            hearts[i].sprite = i < currentHealth ? fullHeart : emptyHeart;
         }
     }
 
@@ -61,8 +66,9 @@ public class PlayerHealth : MonoBehaviour
 
         Debug.Log("Player died!");
 
-        // Trigger death animation if available
-        anim.SetTrigger("Die");
+        // Trigger death animation
+        if(anim != null)
+            anim.SetTrigger("Die");
 
         // Delay scene load until animation finishes
         StartCoroutine(LoadGameOverAfterDelay());
@@ -70,7 +76,7 @@ public class PlayerHealth : MonoBehaviour
 
     private System.Collections.IEnumerator LoadGameOverAfterDelay()
     {
-        // Wait for animation length or use fixed delay
+        // Wait for animation length or a fixed delay (adjust 1.2f if your animation is longer)
         yield return new WaitForSeconds(1.2f);
         SceneManager.LoadScene("GameOver");
     }
